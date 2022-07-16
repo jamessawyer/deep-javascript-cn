@@ -12,11 +12,11 @@ export default {
         text: '2.类型，值，和变量',
         items: [
           {
-            text: 'JS中的类型强转',
+            text: '⚡JS中的类型强转',
             link: '/2/Type-coercion-in-JavaScript'
           },
           {
-            text: '环境-变量的幕后',
+            text: '⚡环境-变量的幕后',
             link: '/2/Environments-under-the-hood-of-variables'
           }
         ]
@@ -47,5 +47,10 @@ export default {
         items: []
       }
     ]
+  },
+  markdown: {
+    // lineNumbers: true, // 是否显示行号
+    // options for markdown-it-toc-done-right
+    toc: { level: [1, 2] },
   }
 }
