@@ -5,21 +5,46 @@ export default {
   themeConfig: {
     editLink: {
       text: '在GitHub编辑此页',
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path'
+      pattern: 'https://github.com/jamessawyer/deep-javascript-cn/edit/main/docs/:path'
     },
     sidebar: [
       {
-        text: '深入学习JavaScript',
+        text: '2.类型，值，和变量',
         items: [
           {
-            text: '介绍',
-            link: '/index'
+            text: 'JS中的类型强转',
+            link: '/2/Type-coercion-in-JavaScript'
           },
           {
-            text: '快速入门',
-            link: '/getting-started'
+            text: '环境-变量的幕后',
+            link: '/2/Environments-under-the-hood-of-variables'
           }
         ]
+      },
+      {
+        text: '3.处理数据',
+        items: []
+      },
+      {
+        text: '4.OOP：对象属性特性',
+        items:[]
+      },
+      {
+        text: '5.OOP技术',
+        items: [
+          {
+            text: '属性特性介绍',
+            link: '/5/Property-attributes-an-Introduction'
+          }
+        ]
+      },
+      {
+        text: '6.正则表达式',
+        items: []
+      },
+      {
+        text: '7.其它话题：元编程',
+        items: []
       }
     ]
   }
