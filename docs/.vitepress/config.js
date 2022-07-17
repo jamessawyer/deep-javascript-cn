@@ -10,27 +10,31 @@ export default {
     sidebar: [
       {
         text: '2.类型，值，和变量',
+        collapsible: true,
         items: [
           {
-            text: '⚡JS中的类型强转',
-            link: '/2/Type-coercion-in-JavaScript'
+            text: '2.⚡JS中的类型强转',
+            link: '/2/Type-coercion-in-JavaScript',
           },
           {
-            text: '⚡环境-变量的幕后',
+            text: '3.⚡环境-变量的幕后',
             link: '/2/Environments-under-the-hood-of-variables'
           }
         ]
       },
       {
         text: '3.处理数据',
+        collapsible: true,
         items: []
       },
       {
         text: '4.OOP：对象属性特性',
+        collapsible: true,
         items:[]
       },
       {
         text: '5.OOP技术',
+        collapsible: true,
         items: [
           {
             text: '属性特性介绍',
@@ -40,10 +44,12 @@ export default {
       },
       {
         text: '6.正则表达式',
+        collapsible: true,
         items: []
       },
       {
         text: '7.其它话题：元编程',
+        collapsible: true,
         items: []
       }
     ]
