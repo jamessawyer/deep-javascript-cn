@@ -10,7 +10,7 @@ export default {
     },
     sidebar: [
       {
-        text: '2.类型，值，和变量',
+        text: 'Ⅱ.类型，值，和变量',
         collapsible: true,
         items: [
           {
@@ -18,23 +18,23 @@ export default {
             link: '/2/Type-coercion-in-JavaScript',
           },
           {
-            text: '3.⚡环境-变量的幕后',
-            link: '/2/Environments-under-the-hood-of-variables'
+            text: '3.解构算法',
+            link: '/2/The-destructuring-algorithm'
           }
         ]
       },
       {
-        text: '3.处理数据',
+        text: 'Ⅲ.处理数据',
         collapsible: true,
         items: []
       },
       {
-        text: '4.OOP：对象属性特性',
+        text: 'Ⅳ.OOP：对象属性特性',
         collapsible: true,
         items:[]
       },
       {
-        text: '5.OOP技术',
+        text: 'Ⅴ.OOP技术',
         collapsible: true,
         items: [
           {
@@ -44,12 +44,12 @@ export default {
         ]
       },
       {
-        text: '6.正则表达式',
+        text: 'Ⅵ.正则表达式',
         collapsible: true,
         items: []
       },
       {
-        text: '7.其它话题：元编程',
+        text: 'Ⅶ.其它话题：元编程',
         collapsible: true,
         items: []
       }
