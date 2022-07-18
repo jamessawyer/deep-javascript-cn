@@ -11,24 +11,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: latest
-          run_install: |
-            -args: [--frozen-lockfile. --strict-peer-dependencies]
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
-          node-version: '>=16.14.2'
-          cache: 'pnpm'
-      - name: Install dependencies
-        run: pnpm install
+          node-version: 16
+          cache: yarn
+      - run: yarn install --frozen-lockfile
 
       - name: Build
-        run: pnpm run docs:build
+        run: yarn docs:build
 
-      # 部署到 GitHub Pages
-      - name: Deploy site
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
