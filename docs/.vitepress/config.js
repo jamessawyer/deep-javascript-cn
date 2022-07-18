@@ -23,7 +23,11 @@ export default {
           },
           {
             text: '4.⚡环境-变量背后的原理',
-            link: '/2/Environments-under-the-hood-of-variables.md',
+            link: '/2/Environments-under-the-hood-of-variables',
+          },
+          {
+            text: '5.⚡深入理解全局变量',
+            link: '/2/A-detailed-look-at-global-variables',
           },
         ]
       },
