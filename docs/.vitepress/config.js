@@ -20,7 +20,11 @@ export default {
           {
             text: '3.解构算法',
             link: '/2/The-destructuring-algorithm'
-          }
+          },
+          {
+            text: '4.⚡环境-变量背后的原理',
+            link: '/2/Environments-under-the-hood-of-variables.md',
+          },
         ]
       },
       {
