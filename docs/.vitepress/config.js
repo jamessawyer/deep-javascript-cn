@@ -58,6 +58,6 @@ export default {
   markdown: {
     // lineNumbers: true, // 是否显示行号
     // options for markdown-it-toc-done-right
-    toc: { level: [1, 2] },
+    toc: { level: [1, 2, 3] },
   }
 }
