@@ -2,6 +2,7 @@ export default {
   title: 'Deep JavaScript',
   description: 'A book in the depths of JavaScript',
   lastUpdated: true,
+  base: '/deep-javascript-cn/',
   themeConfig: {
     editLink: {
       text: '在GitHub编辑此页',
