@@ -47,7 +47,7 @@ export default {
         collapsible: true,
         items:[
           {
-            text: '10.属性特性介绍',
+            text: '10.⚡属性特性介绍',
             link: '/4/Property-attributes-an-Introduction',
           },
           {
@@ -74,7 +74,12 @@ export default {
       {
         text: 'Ⅶ.其它话题：元编程',
         collapsible: true,
-        items: []
+        items: [
+          {
+            text: '20.⚡使用Proxies进行元编程',
+            link: '/7/Metaprogramming-with-Proxies'
+          }
+        ]
       }
     ]
   },
