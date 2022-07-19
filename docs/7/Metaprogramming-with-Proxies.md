@@ -4,46 +4,6 @@ title: Proxy元编程
 目录：
 [[toc]]
 
-1. [Overview](#1)
-2. [Programming versus  metaprogramming](#2)
-   1. [Kindds  of metaprogramming](#2.1)
-3. [Proxies explained](#3)
-   1. [An example](#3.1)
-   2. [Function-specific traps](#3.2)
-   3. [Interceptiong method calls](#3.3)
-   4. [Revocable Proxies](#3.4)
-   5. [Proxies as prototypes](#3.5)
-   6. [Forwarding intercepted operations](#3.6)
-   7. [Pitfall: not all objects can be wrapped transparently by Proxies](#3.7)
-4. [Use cases for Proxies](#4)
-   1. [Tracing property accesses(get, set)](#4.1)
-   2. [Warning about unknown properties(get, set)](#4.2)
-   3. [Negative Array indices(get)](#4.3)
-   4. [Data binding(set)](#4.4)
-   5. [Accessing a restful web service(method calls)](#4.5)
-   6. [Revocable references](#4.6)
-   7. [Implementing the DOM in javascript](#4.7)
-   8. [More use cases](#4.8)
-   9. [Libraries that are using Proxies](#4.9)
-5. [The design of the Proxies API](#5)
-   1. [Stratification: keeping base level and meta level separate](#5.1)
-   2. [VIrtual objects versus wrappers](#5.2)
-   3. [Transparent virtualization and handler encapsulation](#5.3)
-   4. [the meta object protocol and Proxy traps](#5.3)
-   5. [Enforcing invariants for Proxies](#5.5)
-6. [FAQ: Proxies Where is the enumerate trap?](#6)
-7. [Reference: The Proxy API](#7)
-   1. [Creating Proxies](#7.1)
-   2. [Handler methods](#7.2)
-   3. [Invarants of handler methods](#7.3)
-   4. [Operations that affect the prototype chain](#7.4)
-   5. [Reflect](#7.5)
-8. [Conclusion](#8)
-9. [Further Reading](#9)
-
-
-
-
 
 ## 1️⃣ 概览（Overview）
 
