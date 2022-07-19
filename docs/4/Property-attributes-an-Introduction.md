@@ -724,7 +724,7 @@ assert.deepEqual(
 
 ### 8.5 ⭐️用户自定义类的原型属性和实例属性
 
-```js {12,15}
+```js {12,15,19,25}
 class DataContainer {
   accessCount = 0
   constructor(data) {
