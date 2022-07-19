@@ -2,8 +2,14 @@ export default {
   title: 'Deep JavaScript',
   description: 'A book in the depths of JavaScript',
   lastUpdated: true,
-  base: '/deep-javascript-cn/',
+  base: '/deep-javascript-cn/', // 非常重要这个属性！！！
+  
+  head:[
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
+  
   themeConfig: {
+    logo: '/js.svg',
     editLink: {
       text: '在GitHub编辑此页',
       pattern: 'https://github.com/jamessawyer/deep-javascript-cn/edit/main/docs/:path'
@@ -32,14 +38,19 @@ export default {
         ]
       },
       {
-        text: 'Ⅲ.处理数据',
+        text: 'Ⅲ.数据处理',
         collapsible: true,
         items: []
       },
       {
         text: 'Ⅳ.OOP：对象属性特性',
         collapsible: true,
-        items:[]
+        items:[
+          {
+            text: '10.属性特性介绍',
+            link: '/4/Property-attributes-an-Introduction',
+          }
+        ]
       },
       {
         text: 'Ⅴ.OOP技术',
