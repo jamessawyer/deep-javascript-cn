@@ -49,7 +49,11 @@ export default {
           {
             text: '10.属性特性介绍',
             link: '/4/Property-attributes-an-Introduction',
-          }
+          },
+          {
+            text: '11.保护对象更改',
+            link: '/4/Protecting-objects-from-changed',
+          },
         ]
       },
       {
