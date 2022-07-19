@@ -61,8 +61,8 @@ export default {
         collapsible: true,
         items: [
           {
-            text: '属性特性介绍',
-            link: '/5/Property-attributes-an-Introduction'
+            text: '14.⚡实例化类技术（异步属性）',
+            link: '/5/Techniques-for-instantiating-classes'
           }
         ]
       },
