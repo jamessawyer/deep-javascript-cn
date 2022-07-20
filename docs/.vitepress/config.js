@@ -54,6 +54,10 @@ export default {
             text: '11.保护对象更改',
             link: '/4/Protecting-objects-from-changed',
           },
+          {
+            text: '12.⚡属性赋值和属性定义',
+            link: '/4/Properties-assignment-vs-definition',
+          },
         ]
       },
       {
