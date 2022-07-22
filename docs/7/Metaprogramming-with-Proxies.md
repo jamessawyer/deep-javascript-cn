@@ -1350,7 +1350,7 @@ const result = boundMethod()
 - 通用的：对所有对象都生效
 - 单调性（`Monotonic`）：一旦打开，则不能将其关闭，即这个过程不可逆
 
-📚这些和其他在语言操作面前保持不变的特征称为不变性（`invariants`）。通过代理很容易违反不变性，因为它们本质上不受不可扩展性等的约束。**代理 API 通过检查target和handler方法的结果来防止这种情况发生。**😎
+📚这些和其他在语言操作面前保持不变的特征称为不变性（`invariants`）。通过代理很容易违反不变性，因为它们本质上不受不可扩展性等的约束。**代理 API 通过检查target和handler方法的结果来防止这种情况发生** 😎
 
 下面2个子小节描述4种不变性。所有不变性清单在本章最后列出。
 
@@ -1405,12 +1405,12 @@ Object.getPrototypeOf(extProxy) === fakeProto // true
 
 但是，当target是不可扩展时，返回假冒原型，将抛出TypeError:
 
-```js
+```js {2,5}
 const nonextensibleTarget = {}
 Object.preventExtensions(nonextensibleTarget)
 const nonExtProxy = new Proxy(nonextensibleTarget, handler)
 
-// TypeError
+// ❌ TypeError： 代理目标为不可扩展，trap应该返回其真正的原型
 // 'getPrototypeOf' on proxy: proxy target is
 // non-extensible but the trap did not return its
 // actual prototype"
@@ -1419,9 +1419,9 @@ Object.getPrototypeOf(nonExtProxy)
 
 #### 🌰 示例：不可写，不可配置target属性必须显示失败
 
-如果一个target的属性不可写不可配置，则handler必须返回该属性的值，作为对 `get` 陷阱的响应。为了演示这个不可变性，我们创建一个handler，总是对属性返回相同的值：
+如果一个target的属性不可写(`non-writable`)不可配置(`unconfigurable`)，则handler必须返回该属性的值，作为对 `get` 陷阱的响应。为了演示这个不可变性，我们创建一个handler，总是对属性返回相同的值：
 
-```js
+```js {15,17-18}
 const handler = {
   get(target, propKey) {
     return 'abc'
@@ -1436,6 +1436,7 @@ const target = Object.defineProperties({}, {
     configuratble: true
   },
   model: {
+    // 🚨 不可写不可配置属性
     value: 'Isetta',
     writable, false.
     configurablt: false
@@ -1453,8 +1454,8 @@ proxy.manufacturer === 'abc' // true
 
 而 `target.model` 既不可写也不可配置。因此，我们不能冒充它的值😅：
 
-```
-// TypeError
+``` {1}
+// ❌ TypeError: model是一个只读且不可配置的数据属性，但代理没有返回其实际值
 // 'get' on proxy: property 'model' is a read-only and
 // non-configurable data property on the proxy target but
 // the proxy did not return its actual value (expected 'Isetta' but got 'abc')
