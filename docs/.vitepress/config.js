@@ -58,6 +58,10 @@ export default {
             text: '12.⚡属性赋值和属性定义',
             link: '/4/Properties-assignment-vs-definition',
           },
+          {
+            text: '13.属性的可枚举性',
+            link: '/4/Enumerability-of-Properties',
+          },
         ]
       },
       {
