@@ -5,7 +5,7 @@ export default {
   base: '/deep-javascript-cn/', // 非常重要这个属性！！！
   
   head:[
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/deep-javascript-cn/favicon.ico' }]
   ],
   
   themeConfig: {
