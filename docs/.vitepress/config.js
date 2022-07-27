@@ -40,7 +40,12 @@ export default {
       {
         text: 'Ⅲ.数据处理',
         collapsible: true,
-        items: []
+        items: [
+          {
+            text: '7.JS对象和数组的拷贝',
+            link: '/3/Copying-objects-and-arrays',
+          }
+        ]
       },
       {
         text: 'Ⅳ.OOP：对象属性特性',
