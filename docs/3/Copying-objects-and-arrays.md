@@ -145,13 +145,13 @@ assert.equal({}.hasOwnProperty.call(copy, 'length'), false)
 - 它会包含所有特性（不止是 `value`），因此它们能正确的拷贝 `getters` & `setters` & 只读属性，等等
 - `Object.getOwnPropertyDescriptors()` 会同时获取可枚举属性和不可枚举属性
 
-关于枚举性，可以查看 [属性的可枚举性](https://jamessawyer.github.io/deep-javascript-cn/4/Enumerability-of-Properties.html) 这一章。
+关于枚举性，可以查看 [属性的可枚举性](../4/Enumerability-of-Properties) 这一章。
 
 
 
 #### 2.1.5 ⭐ 使用Spreading时属性特性不会被准确的拷贝
 
-📚 独立于 [属性特性](https://jamessawyer.github.io/deep-javascript-cn/4/Property-attributes-an-Introduction.html)，**它的副本总是变为可写可配置的数据属性**。
+📚 独立于 [属性特性](../4/Property-attributes-an-Introduction)，**它的副本总是变为可写可配置的数据属性**。
 
 比如，我们将 `original.prop` 特性设置为 `writable = false` & `configurable = false`:
 
@@ -293,7 +293,7 @@ const copy2 = Object.assign({}, oirginal)
 - `Spreading` 通过 **定义（`definition`）** 方式创建副本属性
 
 ::: tip
-💡 *赋值会调用自身和继承的 `setters`，而定义则不会。[assignment vs. definition](https://jamessawyer.github.io/deep-javascript-cn/4/Properties-assignment-vs-definition.html)* 
+💡 *赋值会调用自身和继承的 `setters`，而定义则不会。[assignment vs. definition](../4/Properties-assignment-vs-definition)* 
 :::
 
 这种差异并不是很显著。下面代码是个例子，但这个例子比较刻意：
@@ -328,7 +328,7 @@ assert.deepEqual(
 
 ### 2.3 ⭐ 使用Object.getOwnPropertyDescriptors()+Object.defineProperties()进行浅拷贝
 
-JS允许我们通过 [属性描述器](https://jamessawyer.github.io/deep-javascript-cn/4/Property-attributes-an-Introduction.html#_2%EF%B8%8F%E2%83%A3-%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6%EF%BC%88property-descriptors%EF%BC%89) 创建属性，它是指定了属性特性的一个对象。比如，通过 `Object.defineProperties()`，在实战中我们已经见过这个方法。如果结合 `Object.getOwnPropertyDescriptors()` 我们可以更准确的进行拷贝：
+JS允许我们通过 [属性描述器](../4/Property-attributes-an-Introduction) 创建属性，它是指定了属性特性的一个对象。比如，通过 `Object.defineProperties()`，在实战中我们已经见过这个方法。如果结合 `Object.getOwnPropertyDescriptors()` 我们可以更准确的进行拷贝：
 
 ```js
 function copyAllOwnProperties(original) {
