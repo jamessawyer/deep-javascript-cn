@@ -80,6 +80,10 @@ export default {
           {
             text: '15.类实例拷贝-clone&拷贝构造器',
             link: '/5/Copying-instances-of-classes-clone-vs-copy-constructors'
+          },
+          {
+            text: '16.集合不可变性包装器',
+            link: '/5/Immutable-wrappers-for-collections'
           }
         ]
       },
