@@ -76,6 +76,10 @@ export default {
           {
             text: '14.⚡实例化类技术（异步属性）',
             link: '/5/Techniques-for-instantiating-classes'
+          },
+          {
+            text: '15.类实例拷贝-clone&拷贝构造器',
+            link: '/5/Copying-instances-of-classes-clone-vs-copy-constructors'
           }
         ]
       },
