@@ -4,11 +4,6 @@ title: 集合不可变性包装
 目录：
 [[toc]]
 
-1. [Wrapping objects](#1)
-   1. [Making collections immutable via wrapping](#1.1)
-2. [An immutable wrapper for Maps](#2)
-3. [An immutable wrpper for Arrays](#3)
-
 对集合的不可变包装器使集合不可变，通过将其包装到一个新的对象中。
 
 本章，我们将看看它是如何工作的，以及不可变包装的用处。
