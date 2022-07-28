@@ -16,7 +16,7 @@ title: 类实例拷贝技术
 
 
 
-# 1️⃣ .clone()方法
+## 1️⃣ .clone()方法
 
 这个技术在需要被拷贝的类中引入一个 `.clone()` 方法。它返回一个 `this`（即类实例） 的深拷贝。下面示例，展示了3个可被拷贝的类。
 
@@ -62,7 +62,7 @@ class ColorPoint extends Point {
 
 
 
-# 2️⃣ 静态工厂方法
+## 2️⃣ 静态工厂方法
 
 👩🏻‍🏫 **拷贝构造器** 是使用当前类的另一个实例来设置当前实例的构造器。
 ::: tip
@@ -158,7 +158,7 @@ assert.deepEqual(copy, original)
 
 
 
-# 3️⃣ 鸣谢（Acknowledgements）
+## 3️⃣ 鸣谢（Acknowledgements）
 
 [Ron Korvig](https://github.com/ronkorving) 提醒我在JavaScript中使用静态工厂方法，而不是重载构造函数进行深度复制。
 
