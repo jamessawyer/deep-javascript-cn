@@ -44,7 +44,11 @@ export default {
           {
             text: '7.JS对象和数组的拷贝',
             link: '/3/Copying-objects-and-arrays',
-          }
+          },
+          {
+            text: '8.破坏性和非破坏性更新数据',
+            link: '/3/Updating-data-destructively-and-non-destructively',
+          },
         ]
       },
       {
