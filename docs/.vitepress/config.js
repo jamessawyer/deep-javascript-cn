@@ -49,6 +49,10 @@ export default {
             text: '8.破坏性和非破坏性更新数据',
             link: '/3/Updating-data-destructively-and-non-destructively',
           },
+          {
+            text: '9.共享可变状态问题',
+            link: '/3/The-problem-of-shared-mutable-state-and-how-to-avoid-them',
+          },
         ]
       },
       {
