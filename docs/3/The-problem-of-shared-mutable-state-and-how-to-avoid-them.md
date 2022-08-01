@@ -85,7 +85,7 @@ main()
 
 💡对拷贝数据，可以参考本书的下面2章：
 
-- [7.Copying objects and Arrays](./Copying-objects-and-Arrays)
+- [7.Copying objects and Arrays](./Copying-objects-and-arrays)
 - [15.Copying instances of classes: .clone() vs. copy constructors](../5/Copying-instances-of-classes-clone-vs-copy-constructors)
 
 
