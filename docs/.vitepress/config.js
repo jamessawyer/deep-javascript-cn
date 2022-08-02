@@ -98,7 +98,12 @@ export default {
       {
         text: 'Ⅵ.正则表达式',
         collapsible: true,
-        items: []
+        items: [
+          {
+            text: '17.⚡正则环视断言',
+            link: '/6/Regular-expressions-lookaround-assertions-by-example'
+          },
+        ]
       },
       {
         text: 'Ⅶ.其它话题：元编程',
