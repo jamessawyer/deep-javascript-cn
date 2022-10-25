@@ -25,14 +25,14 @@ function move({x, y} = { x: 0, y: 0}) {}
 
 📚 解构赋值看起来如下：
 
-```
+```bash
 «pattern» = «value»
 ```
 
 *我们想使用 `pattern` 从 `value` 中提取数据*。
 
 👩🏻‍🏫 我们将学习一种执行这种赋值的算法。 这个算法在函数式编程成称之为 *模式匹配（`pattern matching` 简称为：匹配）* 😎。它指定操作符 `←` (" match against ")，该操作符将 *模式* 与 *值* 匹配，并在这样做时赋值给变量:
-```
+```bash
 «pattern» ← «value»
 ```
 
@@ -50,7 +50,7 @@ function move({x, y} = { x: 0, y: 0}) {}
 
 本章中使用的声明式规则对输入进行操作，并通过副作用（`side effects`）的形式产生算法的结果。下面就是这样的一个规则📚：
 
-```{1}
+```bash {1}
 // 规则 (2c)
 {key: «pattern», «properties»} ← obj // head
 
@@ -72,7 +72,7 @@ function move({x, y} = { x: 0, y: 0}) {}
 
 让我们考虑本章另一个规则：
 
-```{1}
+```bash {1}
 // 规则 (2e)
 {} ← obj(no properties left)  // head
 
@@ -93,7 +93,7 @@ function move({x, y} = { x: 0, y: 0}) {}
 
 *完成算法是通过一系列声明式规则指定的。😎* 假设我们想计算下面匹配表达式：
 
-```
+```bash
 {first: f, last: l} ← obj
 ```
 
@@ -101,7 +101,7 @@ function move({x, y} = { x: 0, y: 0}) {}
 
 *📚 有时head会包含一个条件来决定规则是否可被应用*， 比如：
 
-```{1}
+```bash {1}
 // 规则 (3a)
 [«elements»] ← non_iterable    // head
 if (!isIterable(non_iterable)) // head中的条件
@@ -145,7 +145,7 @@ if (!isIterable(non_iterable)) // head中的条件
 
 规则 `1`
 
-```{1}
+```bash {1}
 // 规则 1
 x ← value (包含 null 和 undefined)
 x = value
@@ -161,7 +161,7 @@ x = value
 
 规则 `(2a)`:
 
-```
+```bash
 {«properties»} ← undefined (illegal value)
  
 throw new TypeError();
@@ -169,7 +169,7 @@ throw new TypeError();
 
 规则 `(2b)`:
 
-```
+```bash
 {«properties»} ← null (illegal value)
 
 throw new TypeError();
@@ -177,7 +177,7 @@ throw new TypeError();
 
 规则 `(2c)`:
 
-```
+```bash
 {key: «pattern», «properties»} ← obj
 
 «pattern» ← obj.key  // 表示 obj.key 匹配 pattern
@@ -186,7 +186,7 @@ throw new TypeError();
 
 规则 `(2d)`:
 
-```
+```bash
 {key: «pattern» = default_value, «properties»} ← obj
 
 const tmp = obj.key
@@ -200,7 +200,7 @@ if (tmp !== undefined) {
 
 规则 `(2e)`:
 
-```
+```bash
 {} ← obj (no properties left)
 
 // We are finished
@@ -222,7 +222,7 @@ if (tmp !== undefined) {
 
 规则 `(3a)`:
 
-```
+```bash
 [«elements»] ← non_iterable (illegal value)
 if (!isIterable(non_iterable))
 
@@ -231,7 +231,7 @@ if (!isIterable(non_iterable))
 
 规则 `(3b)`:
 
-```
+```bash
 [«elements»] ← iterable
 if (isIterable(iterable)) // 如果是可迭代的
 
@@ -260,7 +260,7 @@ function isIterable(value) {
 
 规则 `(3c)`:
 
-```
+```bash
 «pattern», «elements» ← iterator
 
 «pattern» ← getNext(iterator) // 最后一个item是 undefined
@@ -269,7 +269,7 @@ function isIterable(value) {
 
 规则 `(3d)`:
 
-```
+```bash
 «pattern» = default_value, «elements» ← iterator
 
 const tmp = getNext(iterator);  // 最后一个item是 undefined
@@ -283,7 +283,7 @@ if (tmp !== undefined) {
 
 规则 `(3e)`:
 
-```
+```bash
 , «elements» ← iterator (hole, elision) // `,` 表示第一个元素跳过匹配
 
 getNext(iterator); // skip
@@ -292,7 +292,7 @@ getNext(iterator); // skip
 
 规则 `(3f)`: (spreading操作符)
 
-```
+```bash
  ...«pattern» ← iterator  // (always last part!) 展开符总是在最后
  
 const tmp = [];
@@ -304,7 +304,7 @@ for (const elem of iterator) {
 
 规则 `(3g)`: 
 
-```
+```bash
 ← iterator   // (no elements left) 没有剩余元素了
 
 // We are finished
@@ -437,7 +437,7 @@ func(1, 2)
 
 参数 `a` & `b` 的设置类似下面解构：
 
-```
+```bash
 [a=0, b=0] ← []
 ```
 
@@ -455,19 +455,19 @@ func(1, 2)
 
  导致下面解构：
 
-```
+```bash
 [{ x, y } = { x: 0, y: 0}] ← []
 ```
 
 左侧的单数组元素模式没有匹配到右侧的空数组值，这也是为什么 `{x, y}` 匹配默认值，而不是来自右侧的数据（规则 `3b` & `3d`）:
 
-```
+```bash
 { x, y } ← { x: 0, y: 0 }
 ```
 
 左侧包含 *属性值简写（`property value shorthands`）*。它实际的形式为：
 
-```
+```bash
 { x: x, y: y } ← { x: 0, y: 0 }
 ```
 
@@ -486,13 +486,13 @@ y = 0;
 
 这将导致如下解构：
 
-```
+```bash
 [{ x, y } = { x: 0, y: 0}] ← [{ z: 3 }]
 ```
 
 右侧在数组索引 `0` 位置有一个数组元素。因此，默认值被忽略，下一个步骤是（规则 [3d](#2.4)）:
 
-```
+```bash
 { x, y } ← { z: 3 }
 ```
 
@@ -510,25 +510,25 @@ y = 0;
 
 导致下面解构：
 
-```
+```bash
 [{ x=0, y=0} = {}] ← []
 ```
 
 右侧数组元素为空，因此使用默认值（规则 [3d](#2.4)）:
 
-```
+```bash
 {x=0, y=0} ← {}
 ```
 
 左侧包含属性简写，相当于：
 
-```
+```bash
 {x: x=0, y: y=0} ← {}
 ```
 
 `x` 和 `y` 都没有匹配到右侧的空对象值。因此，默认值被使用，下面结构被执行 （规则 [2d](#2.3)）:
 
-```
+```bash
 x ← 0
 y ← 0
 ```
@@ -550,13 +550,13 @@ y = 0
 
 解构：
 
-```
+```bash
 [{x=0, y=0} = {}] ← [{ z: 3 }]
 ```
 
 数组模式第一个元素匹配右侧，这个匹配导致解构继续（规则 [3d](#2.4)）:
 
-```
+```bash
 { x=0, y=0 } ← { z: 3 }
 ```
 

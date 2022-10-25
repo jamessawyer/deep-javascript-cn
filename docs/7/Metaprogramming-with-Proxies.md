@@ -1454,7 +1454,7 @@ proxy.manufacturer === 'abc' // true
 
 而 `target.model` 既不可写也不可配置。因此，我们不能冒充它的值😅：
 
-``` {1}
+```bash {1}
 // ❌ TypeError: model是一个只读且不可配置的数据属性，但代理没有返回其实际值
 // 'get' on proxy: property 'model' is a read-only and
 // non-configurable data property on the proxy target but

@@ -544,7 +544,7 @@ Object.assign 将为所有已流通的 extend() API 铺平道路。我们认为�
 
 - Node.js内置模块 `fs` 有一个属性 `promises`，它包含基于Promise版本 `fs` API的对象。在那个issue存在的时候，读取 `.promise` 会导致下面控制台警告：
 
-  ```
+  ```bash
   ExperimentalWarning: The fs.promises API is experimental
   ```
 

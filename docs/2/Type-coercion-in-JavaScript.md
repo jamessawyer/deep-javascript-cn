@@ -727,19 +727,19 @@ Object.prototype.toString = function() {
   let builtinTag // 内置标签
   if (isArray) {
     builtinTag = 'Array'
-  } else if ('__ParameterMap__' in O) { // [[ParameterMap]]
+  } else if ('__ParameterMap__' in O) {   // [[ParameterMap]]
     builtinTag = 'Arguments'
-  } else if ('__Call__' in O) { // [[Call]]
+  } else if ('__Call__' in O) {           // [[Call]]
     builtinTag = 'Function'
-  } else if ('__ErrorData__' in O) { // [[ErrorData]]
+  } else if ('__ErrorData__' in O) {      // [[ErrorData]]
     builtinTag = 'Error'
-  } else if ('__BooleanData__' in O) { // [[BooleanData]]
+  } else if ('__BooleanData__' in O) {    // [[BooleanData]]
     builtinTag = 'Boolean'
-  } else if ('__NumberData__' in O) { // [[NumberData]]
+  } else if ('__NumberData__' in O) {     // [[NumberData]]
     builtinTag = 'Number'
-  } else if ('__DateValue__' in O) { // [[DateValue]]
+  } else if ('__DateValue__' in O) {      // [[DateValue]]
     builtinTag = 'Date'
-  } else if ('__RegExpMatcher__' in O) { // [[RegExpMatcher]]
+  } else if ('__RegExpMatcher__' in O) {  // [[RegExpMatcher]]
     builtinTag = 'RegExp'
   } else { // 默认 Object
     builtinTag = 'Object'
