@@ -5,6 +5,7 @@
   "main": "index.js",
   "homepage": "https://jamessawayer.github.io/deep-javascript-cn",
   "scripts": {
+    "dev": "pnpm docs:dev",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs --port 5001"
@@ -13,12 +14,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.4",
-    "vue": "^3.2.37"
+    "vitepress": "1.0.0-alpha.22",
+    "vue": "^3.2.41"
   },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
+        "@algolia/client-search",
         "@types/react",
         "react",
         "react-dom"
