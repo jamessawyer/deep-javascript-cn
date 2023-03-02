@@ -10,6 +10,8 @@ export default {
   
   themeConfig: {
     logo: '/js.svg',
+    outlineTitle: '目录',
+    outline: [2, 3],
     editLink: {
       text: '在GitHub编辑此页',
       pattern: 'https://github.com/jamessawyer/deep-javascript-cn/edit/main/docs/:path'

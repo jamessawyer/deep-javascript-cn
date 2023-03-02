@@ -5,3 +5,6 @@ DS_*
 
 *.log
 package-error.json
+
+docs/.vitepress/cache/**
+docs/dev-dist/**
