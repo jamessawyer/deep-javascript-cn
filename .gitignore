@@ -8,3 +8,4 @@ package-error.json
 
 docs/.vitepress/cache/**
 docs/dev-dist/**
+docs/.DS_Store

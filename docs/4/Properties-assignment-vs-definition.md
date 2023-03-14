@@ -542,7 +542,7 @@ assert.equal(lastSetterArgument, 'def')
 
 
 
-### 4.3 ⭐ 公有类字段通过赋值的方式添加
+### 4.3 ⭐ 公有类字段通过定义的方式添加
 
 
 
